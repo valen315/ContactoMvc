@@ -9,7 +9,8 @@
     <h2>Mis contactos</h2>
     <div style="display:flex; justify-content:space-between;">
         <div>
-            <h2>@Html.ActionLink("Crear contacto", "New", null, new { data_modal = "" }) </h2>
+            <button class="btn btn-success">@Html.ActionLink("Crear contacto", "New", null, new { data_modal = "" })</button>
+            
         </div>
         <form class="form-inline my-2 my-lg-0">
             @using (Html.BeginForm("Index", "Contact", FormMethod.Get))
