@@ -1,0 +1,42 @@
+﻿@model contactosProyecto.Models.ViewModels.ContactFormModel
+
+<div class="modal-header">
+    <h5 class="modal-title">Nuevo contacto</h5>
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+     </button>
+</div>
+@using (Html.BeginForm("New", "Contact", FormMethod.Post, new { @class = "modal-form" }))
+{
+ <div class="modal-body">
+    <div class="form-group">
+        @Html.LabelFor(d => d.Name)
+        @Html.TextBoxFor(d => d.Name, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Name, null, new { @class = "mal" })
+    </div>
+     <div class="form-group">
+          @Html.LabelFor(d => d.Number)
+          @Html.TextBoxFor(d => d.Number, "", new { @class = "form-control" })
+          @Html.ValidationMessageFor(d => d.Number, null, new { @class = "mal" })
+     </div>
+     <div class="form-group ">
+           @Html.LabelFor(d => d.Detail)
+           @Html.TextBoxFor(d => d.Detail, "", new { @class = "form-control" })
+           @Html.ValidationMessageFor(d => d.Detail, null, new { @class = "mal" })
+     </div>
+     <div class="form-check">
+           @Html.LabelFor(d => d.Favorite)
+           @Html.CheckBoxFor(d => d.Favorite)
+      </div>
+      <div class="form-check">
+           @Html.LabelFor(d => d.Emergency)
+           @Html.CheckBoxFor(d => d.Emergency)
+      </div>
+ </div>
+       <div class="modal-footer">
+           <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+            <button class="btn btn-primary" type="submit">Guardar</button>
+       </div>
+ }
+
+

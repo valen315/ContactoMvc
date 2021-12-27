@@ -1,0 +1,30 @@
+﻿@model List<contactosProyecto.Models.ViewModels.ContactViewModel>
+@{
+    ViewBag.Title = "Emergency";
+}
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<div class="container">
+
+    <h2>Mis Contactos de Emergencia</h2>
+
+    <div class=" mt-3" style="display:flex; flex-wrap:wrap">
+        @if (Model.Count() == 0)
+        {<h4>No hay contactos</h4>}
+        else
+        {
+            foreach (var data in Model)
+            {
+                <div class="card m-2" style="width:30%">
+                    <div class="card-body">
+                        <h5 class="card-title">@data.Name</h5>
+                        <p class="card-text"> @data.Number</p>
+                        <p class="card-text"> @data.Detail</p>
+                        <p class="card-text">Contacto de Emergencia</p>
+                    </div>
+                </div>}
+        }
+    </div>
+</div>
