@@ -9,7 +9,7 @@
     <h2>Mis contactos</h2>
     <div style="display:flex; justify-content:space-between;">
         <div>
-            <button class="btn btn-success">@Html.ActionLink("Crear contacto", "New", null, new { data_modal = "" })</button>
+            <button class="btn btn-light">@Html.ActionLink("Crear contacto", "New", null, new { data_modal = "" })</button>
             
         </div>
         <form class="form-inline my-2 my-lg-0">
@@ -48,9 +48,10 @@
             <i class="far fa-star" aria-hidden="true"></i>
         </button>
     </a>
-      -->
-                            @Html.ActionLink("Editar", "Edit",new { Id = @data.Id}, new { data_modal = "" })
-                            @Html.ActionLink("Eliminar", "Remove", new { Id = @data.Id }, new { data_modal = "" })
+      -->  
+                            <button class="btn btn-light"> @Html.ActionLink("Editar", "Edit", new { Id = @data.Id }, new { data_modal = "" })</button>
+                            <button type="button" class="btn btn-light">@Html.ActionLink("Eliminar", "Remove", new { Id = @data.Id }, new { data_modal = "" })</button>
+                            
                         </div>
                     </div>
                 </div>}
