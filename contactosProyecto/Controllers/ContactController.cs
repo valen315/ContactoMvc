@@ -172,7 +172,6 @@ namespace contactosProyecto.Controllers
                 db.Contacts.Remove(Data);
                 db.SaveChanges();
             }
-
             return Redirect("~/Contact/");
         }
 

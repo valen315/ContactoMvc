@@ -32,25 +32,9 @@
                         <h5 class="card-title">@data.Name</h5>
                         <p class="card-text"> @data.Number</p>
                         <div>
-                            <!----
-         <a href="~/Contact/Edit/data.Id">
-        <button type="button" class="btn btn-primary btn-circle">
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-        </button>
-    </a>
-    <a href="~/Contact/Remove/data.Id">
-        <button type="button" class="btn btn-danger btn-circle">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-        </button>
-    </a>
-    <a href="~/Contact/Favorite/data.Id">
-        <button type="button" class="btn btn-danger btn-circle">
-            <i class="far fa-star" aria-hidden="true"></i>
-        </button>
-    </a>
-      -->  
-                            <button class="btn btn-light"> @Html.ActionLink("Editar", "Edit", new { Id = @data.Id }, new { data_modal = "" })</button>
-                            <button class="btn btn-light">@Html.ActionLink("Eliminar", "Remove", new { Id = @data.Id }, new { data_modal = "" })</button>
+                            
+                             @Html.ActionLink("Editar", "Edit", new { Id = @data.Id }, new { data_modal = "" }) |
+                            @Html.ActionLink("Eliminar", "Remove", new { Id = @data.Id })
                             
                         </div>
                     </div>
